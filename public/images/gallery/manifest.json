@@ -1,0 +1,24 @@
+{
+  "images": [
+    {
+      "src": "/images/gallery/1AA89117-1F44-44A5-9050-5F9629671EC1_1_105_c.jpeg",
+      "alt": "Coffee Beans",
+      "filename": "coffee-beans.jpg"
+    },
+    {
+      "src": "/images/gallery/4FAA944A-7CD0-47F4-894C-85AE711ABBC6_1_105_c.jpeg", 
+      "alt": "Latte Art",
+      "filename": "latte-art.jpg"
+    },
+    {
+      "src": "/images/gallery/C3B4B994-1705-41A3-ACFC-87D634E44405_1_105_c.jpeg",
+      "alt": "Maven Interior", 
+      "filename": "interior.jpg"
+    },
+    {
+      "src": "/images/gallery/137A7DB5-56E4-4EC0-8DC7-4E0156DAD6F2_1_105_c.jpeg",
+      "alt": "Maven Coffee",
+      "filename": "maven-coffee.jpg"
+    }
+  ]
+}

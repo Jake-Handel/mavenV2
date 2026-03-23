@@ -4,18 +4,21 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import SemicircleNav from './SemicircleNav'
 import MobileNav from './MobileNav'
+import TopBar from './Topbar'
 
 interface PageLayoutProps {
   title: string
   children: React.ReactNode
+  fullWidth?: boolean
 }
 
-export default function PageLayout({ title, children }: PageLayoutProps) {
+export default function PageLayout({ title, children, fullWidth }: PageLayoutProps) {
   return (
     <div
       className="grain min-h-screen relative"
       style={{ background: 'var(--primary)' }}
     >
+      <TopBar />
       <SemicircleNav />
       <MobileNav />
 
@@ -29,22 +32,7 @@ export default function PageLayout({ title, children }: PageLayoutProps) {
         <div style={{ width: '40px', height: '2px', background: 'var(--accent)' }} />
       </div>
 
-      <div className="min-h-screen flex flex-col px-6 md:px-12 lg:px-16 py-12 lg:pr-64">
-        {/* Back link */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Link
-            href="/"
-            className="font-maven inline-flex items-center gap-2 mb-12"
-            style={{ color: 'rgba(245,240,232,0.5)', fontSize: '0.75rem', letterSpacing: '0.15em' }}
-          >
-            <span style={{ fontSize: '1rem' }}>←</span> MAVEN
-          </Link>
-        </motion.div>
-
+      <div className={`min-h-screen flex flex-col px-6 md:px-12 lg:px-16 pt-[76px] pb-12 ${fullWidth ? '' : 'lg:pr-64'}`}>
         {/* Page title */}
         <motion.h1
           className="font-maven"

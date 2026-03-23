@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import PageLayout from '@/components/PageLayout'
+import TopBar from '@/components/Topbar'
 
 const inputStyle = {
   width: '100%',
@@ -23,7 +24,7 @@ export default function ContactPage() {
   const handleSubmit = () => {
     const subject = encodeURIComponent(`Message from ${form.name} via Maven website`)
     const body = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`)
-    window.location.href = `mailto:hello@mavencoffee.com.au?subject=${subject}&body=${body}`
+    window.location.href = `mailto:contact@maven-coffee.com?subject=${subject}&body=${body}`
   }
 
   return (
@@ -46,7 +47,7 @@ export default function ContactPage() {
               VISIT US
             </h3>
             <p style={{ color: 'rgba(245,240,232,0.75)', lineHeight: 1.8, fontSize: '0.95rem' }}>
-              123 Placeholder Street<br />
+              18 Marcus Clarke St<br />
               Canberra ACT 2601<br />
               Australia
             </p>
@@ -62,13 +63,10 @@ export default function ContactPage() {
             </h3>
             <div style={{ color: 'rgba(245,240,232,0.75)', lineHeight: 2, fontSize: '0.9rem' }}>
               <div className="flex justify-between" style={{ maxWidth: '220px' }}>
-                <span>Mon – Fri</span><span style={{ color: '#F5F0E8' }}>7:00 – 16:00</span>
+                <span>Mon – Fri</span><span style={{ color: '#F5F0E8' }}>7:30 – 12:00</span>
               </div>
               <div className="flex justify-between" style={{ maxWidth: '220px' }}>
-                <span>Saturday</span><span style={{ color: '#F5F0E8' }}>8:00 – 15:00</span>
-              </div>
-              <div className="flex justify-between" style={{ maxWidth: '220px' }}>
-                <span>Sunday</span><span style={{ color: '#F5F0E8' }}>8:00 – 14:00</span>
+                <span>Weekends</span><span style={{ color: '#F5F0E8' }}>Closed</span>
               </div>
             </div>
           </div>
@@ -83,27 +81,27 @@ export default function ContactPage() {
             </h3>
             <div className="space-y-3">
               <a
-                href="mailto:hello@mavencoffee.com.au"
+                href="mailto:contact@maven-coffee.com"
                 className="flex items-center gap-3 group"
                 style={{ color: 'rgba(245,240,232,0.75)', fontSize: '0.9rem', transition: 'color 0.2s' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#D2691E')}
                 onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,240,232,0.75)')}
               >
                 <span style={{ fontSize: '1rem' }}>✉</span>
-                hello@mavencoffee.com.au
+                contact@maven-coffee.com
               </a>
               <a
-                href="tel:+61200000000"
+                href="tel:+61406830768"
                 className="flex items-center gap-3 group"
                 style={{ color: 'rgba(245,240,232,0.75)', fontSize: '0.9rem', transition: 'color 0.2s' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#D2691E')}
                 onMouseLeave={e => (e.currentTarget.style.color = 'rgba(245,240,232,0.75)')}
               >
                 <span style={{ fontSize: '1rem' }}>☎</span>
-                (02) 0000 0000
+                0406 830 768
               </a>
               <a
-                href="https://instagram.com/mavencoffee"
+                href="https://www.instagram.com/maven_cbr/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 group"
